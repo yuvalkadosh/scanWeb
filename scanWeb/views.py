@@ -5,8 +5,8 @@ def home(request):
     template = 'home.html'
     return render(request, template)
 
-def report(request):
-    template = 'report.html'
+def scan(request):
+    template = 'scan.html'
     return render(request, template)
 
 def about(request):

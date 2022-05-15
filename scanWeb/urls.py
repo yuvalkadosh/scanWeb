@@ -19,12 +19,18 @@ from django.urls import path
 from scanWeb import views
 from django.urls import include, re_path
 
+from django.views.generic import TemplateView
+
 #from myapp.views import home
 
 urlpatterns = [
     
     re_path(r'^$', views.home, name='home'),
-    path('report/', views.report, name='report'),
+    #re_path(r'^report/', TemplateView.as_view(template_name="report.html"),
+     #              name='report'),
+    #path('report/', views.report, name='report'),
+    path('scan/', views.scan, name='scan'),
     path('about/', views.about, name='about'),
     path('admin/', admin.site.urls)
+   
 ]
