@@ -64,15 +64,34 @@
 <br>
 
 
+<script>
+  $.ajax({
+   url: '/get_zap_results',
+   type: 'get',
+   success: function(response){
+     console.log(response)
+    window.frames['zap_iframe'].document.write(response)
+   }
+});
 
+$.ajax({
+   url: '/get_nmap_results/',
+   type: 'get',
+   success: function(response){
+     console.log(response)
+    window.frames['nmap_iframe'].document.write(response)
+   }
+});
+  
+</script>
 
   <div class="row">
     <div class="column">
-      <iframe id="encoder_iframe"  height=500% width="100%" src="{% static 'report.html' %}">
+      <iframe name="zap_iframe"  height=500% width="100%" >
       </iframe>   
     </div>
     <div class="column">
-      <iframe id="encoder_iframe"  height=300% width="100%" src="{% static 'nmap_output.txt' %}">
+      <iframe name="nmap_iframe"  height=300% width="100%">
       </iframe>   
     </div>
   </div>

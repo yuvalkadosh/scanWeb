@@ -29,8 +29,12 @@ urlpatterns = [
     #re_path(r'^report/', TemplateView.as_view(template_name="report.html"),
      #              name='report'),
     #path('report/', views.report, name='report'),
-    path('scan/', views.scan, name='scan'),
+    path('scan/', views.scanPage, name='scan'),
     path('about/', views.about, name='about'),
+    path('startscan/', views.startscan, name='startscan'),
+    path('get_nmap_results/', views.get_nmap_results, name='get_nmap_results'),
+    path('get_zap_results/', views.get_zap_results, name='get_zap_results'),
+    
     path('admin/', admin.site.urls)
    
 ]

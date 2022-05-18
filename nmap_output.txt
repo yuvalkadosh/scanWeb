@@ -1,0 +1,21 @@
+----------------------------------------------------
+Host : 50.87.147.170 (www.yuvalkadosh.com)
+State : up
+----------
+Protocol : tcp
+port : 21	state : open Pure-FTPd 
+port : 22	state : open OpenSSH 5.3
+port : 25	state : open Exim smtpd 4.94.2
+port : 26	state : open Exim smtpd 4.94.2
+port : 53	state : open ISC BIND 9.8.2rc1
+port : 80	state : open Apache httpd 
+port : 110	state : open Dovecot pop3d 
+port : 143	state : open Dovecot imapd 
+port : 443	state : open Apache httpd 
+port : 465	state : open  
+port : 587	state : open  
+port : 993	state : open Dovecot imapd 
+port : 995	state : open Dovecot pop3d 
+port : 2222	state : open OpenSSH 5.3
+port : 2525	state : filtered  
+port : 3306	state : open MySQL 5.6.41-84.1

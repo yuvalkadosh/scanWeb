@@ -63,7 +63,11 @@
     </div>
 <br>
 
-<a href="{% url 'scan' %}" role="button" class="btn btn-success" >SCAN</a>
+<form action="startscan">
+  <input type="text" name="target">
+
+  <button type="submit" class="btn btn-success" >SCAN</button>
+</form>
 
 
 

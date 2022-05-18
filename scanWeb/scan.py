@@ -7,10 +7,14 @@ import nmap
 class Scanner():
     def __init__(self, target) -> None:
         self.target = target
+        with open('report.html', 'w') as f:
+            f.write('')
+        with open('nmap_output.txt', 'w') as f:
+            f.write('')
 
     def init_zap(self):
         # Local Zap ip and api key
-        self.apiKey = 'hch6mjqukjhrp18u86v6fmgjpi'
+        self.apiKey = 'ps9s52brfsvgt9g6mii2gbs7ao'
         self.localProxy = {"http": "http://127.0.0.1:8080",
                            "https": "http://127.0.0.1:8080"}
 
@@ -193,7 +197,8 @@ class Scanner():
             f.write(nm_output)
 
 
-scanner = Scanner('https://yuvalkadosh.com')
-scanner.nmap_scan()
-# scanner.init_zap()
-# scanner.zap_scan()
+def start_scan(target):
+    scanner = Scanner(target)
+    scanner.nmap_scan()
+    scanner.init_zap()
+    scanner.zap_scan()
